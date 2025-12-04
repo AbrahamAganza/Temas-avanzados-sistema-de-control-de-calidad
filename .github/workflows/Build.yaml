@@ -1,5 +1,7 @@
+# Nombre del workflow que aparecerá en la pestaña "Actions" de GitHub
 name: Build, Test, and Analyze
 
+# Define cuándo se ejecutará este workflow
 on:
   push:
     branches:
@@ -7,14 +9,21 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+# Define los trabajos (jobs) que se van a ejecutar
 jobs:
-  sonarqube:name: SonarQube Analysis
+  # --- INICIO DE LA CORRECCIÓN ---
+  # La clave del trabajo ('sonarqube' en este caso) debe estar en su propia línea
+  sonarqube:
+    # Las propiedades del trabajo ('name', 'runs-on') deben estar indentadas debajo de la clave
+    name: SonarQube Analysis
     runs-on: ubuntu-latest
+  # --- FIN DE LA CORRECCIÓN ---
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Esto es requerido por SonarQube para un análisis más preciso
+          # Es requerido por SonarQube para un análisis de historial más preciso
+          fetch-depth: 0
 
       # --- Pasos específicos para un proyecto Flutter ---
       - name: Set up Flutter
@@ -26,11 +35,11 @@ jobs:
         run: flutter pub get
         
       - name: Run tests and generate coverage report
-        run: flutter test --coverage # Genera el informe que SonarCloud leerá
-      # --- Fin de los pasos específicos de Flutter ---
+        run: flutter test --coverage # La bandera --coverage es crucial para SonarCloud
+      # --- Fin de los pasos de Flutter ---
 
       - name: SonarQube Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token automático de GitHub
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}   # El token que guardaste en los secretos del repositorio

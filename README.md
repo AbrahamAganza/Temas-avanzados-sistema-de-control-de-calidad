@@ -125,8 +125,202 @@ Aplicación: El programa de análisis de datos es una herramienta clave de la IS
 
 
 ### **Manual de usuario**
+Se tiene como pantalla principal un login basico de usuario para maestro, los logins solo se pueden conseguir mediante la insercion de usario en la base de datos, es decir directamente con el encargado de las base de datos
+<img width="1235" height="643" alt="image" src="https://github.com/user-attachments/assets/6c67bb4b-9658-42cd-95db-5f1c6016616c" />
+
+Ingresar datos errones no mostrara la siguente respuesta
+<img width="1225" height="276" alt="image" src="https://github.com/user-attachments/assets/b878ee1d-3a02-4f17-9000-8388581e6137" />
+o en caso de que sea un correo valido pero un dato erroneo
+<img width="1253" height="619" alt="image" src="https://github.com/user-attachments/assets/8f819f3c-f0db-4b15-875e-5771cd1331cb" />
+
+La pagina de bienvenida nos muestra los datos de total de alumnos, total de alumnos con un factor de riesgo y el promedio grupal por alumno
+
+<img width="1566" height="837" alt="image" src="https://github.com/user-attachments/assets/87c5b27e-0c4c-4b75-a1f8-f30695e9eb82" />
+
+Estos datos se actualizan en tiempo real
+
+Se puede observar un catalogo aqui, se puede cambiar los datos que se estan mostrando por materia impartida
+
+<img width="1566" height="850" alt="image" src="https://github.com/user-attachments/assets/f125a50a-c484-40a8-9a8d-ad2069436d7c" />
+
+<img width="1569" height="745" alt="image" src="https://github.com/user-attachments/assets/84046545-7274-4bb1-a137-f4808d28ed8e" />
+
+Este es el menu desplegable para mostrar la navegacion
+
+<img width="520" height="374" alt="image" src="https://github.com/user-attachments/assets/05af5e1c-bb1c-433c-9ad5-df3873e0d2a8" />
+
+<img width="850" height="770" alt="image" src="https://github.com/user-attachments/assets/c6d43445-7454-425e-9f4f-2efb8aed172b" />
+
+La pantalla gestionar materias es para ingresar la nueva materia
+
+<img width="1061" height="399" alt="image" src="https://github.com/user-attachments/assets/4c99f6c4-ffe2-4598-9aef-ebcc66712ac6" />
+
+<img width="997" height="504" alt="image" src="https://github.com/user-attachments/assets/da91c55e-76ad-4c6e-b569-35ff636c6a4f" />
+
+En registro de estudiante tenemos para agregar a un nuevo estudiante
+
+<img width="1573" height="841" alt="image" src="https://github.com/user-attachments/assets/0bc32047-7d36-4477-a231-06a6c634e945" />
+
+Los datos de nombre estan normalizados para no aceptar numeros o simbolos y se transforman a mayusculas
+
+<img width="1470" height="556" alt="image" src="https://github.com/user-attachments/assets/542b041d-de1c-4fe0-abfb-f091fe0c097b" />
+
+Se puede observar el boton de eliminar en rojo en alumnos sin calificaciones y los que ya tienen no se pueden eliminar
+
+<img width="1443" height="566" alt="image" src="https://github.com/user-attachments/assets/d979179f-61a4-405d-9187-f7ed862aaac7" />
+
+No puedes guardar un alumno sin sus datos principales 
+
+<img width="1545" height="592" alt="image" src="https://github.com/user-attachments/assets/6bb612c9-cb40-4312-9a00-acec545303b5" />
+
+ni tampoco con el mismo ID
+
+<img width="1569" height="571" alt="image" src="https://github.com/user-attachments/assets/8c61f9da-0926-4c28-9e0b-b6c248d7cd9d" />
+
+El boton del menu de lista detallada muestra los alumnos registrados en la base de datos
+
+<img width="1690" height="691" alt="image" src="https://github.com/user-attachments/assets/b24dc0e4-1c30-4b7f-a7f8-5625b4a0f05b" />
+
+El boton de registro de asistencias muestra el total de dias que se impartio la materia y las asistencias dodne se hace el calculo de porcentaje de asistencia por unidad
+
+<img width="1627" height="763" alt="image" src="https://github.com/user-attachments/assets/e79452c9-c252-4f6d-9b7d-ec6ef8b59a98" />
+
+no puedes ingresar valores mas grandes que los dias de materias impartidos 
+
+<img width="1022" height="815" alt="image" src="https://github.com/user-attachments/assets/1c8f7e05-3722-4c80-a8ab-307a8146cdf6" />
+
+
+el boton de auditoria muestra los registros hechos por el usuario
+
+<img width="1763" height="828" alt="image" src="https://github.com/user-attachments/assets/d3806623-8b5c-47d0-bf4a-7c60c1d91d2b" />
+
+Exportar datos permite exportar archivos html y csv de la lista de estudiantes
+
+<img width="1735" height="489" alt="image" src="https://github.com/user-attachments/assets/f20758f4-9b13-4a0b-a4be-6d0f85ff181d" />
+
+
+
+<img width="218" height="159" alt="image" src="https://github.com/user-attachments/assets/7c1666db-2210-444a-ac6d-825cf8f27ebb" />
+
+
+<img width="1915" height="615" alt="image" src="https://github.com/user-attachments/assets/3075331d-c7d0-44b2-ac8d-8bf0368c4db4" />
+
+
+
+<img width="1129" height="270" alt="image" src="https://github.com/user-attachments/assets/d7906b0f-7574-4cc7-92ca-2feb899bf8fc" />
+
+### **Matriz de cumplimiento**
+
+<img width="1477" height="669" alt="image" src="https://github.com/user-attachments/assets/5ee6af8c-1566-4cca-9d3b-b11e15e3d817" />
+
+
+### **Registro de Pruebas de Accesibilidad (Testing Log)**
+•Caso de Prueba: CP-01: Activación de Texto a Voz◦Pasos de Prueba: 
+1. Navegar a LoginPage.
+2. Presionar el botón "Texto a Voz".
+3. Presionarlo de nuevo mientras habla.
+4. ◦Resultado Esperado:
+1. Se escucha la descripción correcta de la página de login.
+2. La locución se detiene.
+3. ◦Problemas Encontrados y Soluciones: Ninguno.La funcionalidad de play/stop funcionó como se esperaba.
+
+•Caso de Prueba: CP-02: Persistencia del Texto a Voz en Navegación
+◦Pasos de Prueba: 
+1. Ir a Dashboard.
+2. Navegar a Registro de Estudiante.
+3. Presionar "Atrás" para volver al Dashboard.
+4. Activar texto a voz.
+◦Resultado Esperado:
+El texto leído debe ser el del Dashboard, no el de la página anterior.
+◦Problemas Encontrados y Soluciones: Inicialmente se leía la descripción de la página anterior.
+La solución fue implementar un RouteObserver global y convertir DashboardPage y LoginPage a StatefulWidgets con el mixin RouteAware para actualizar el texto en el evento didPopNext.
+
+Caso de Prueba: CP-03: Activación del Modo Dislexia
+◦Pasos de Prueba: 
+1. Iniciar la app.
+2. 2. Presionar el botón "Modo Dislexia".
+3. Observar el texto en LoginPage.
+4. Navegar a Dashboard.
+◦Resultado Esperado:
+La fuente en toda la UI cambia a OpenDyslexic con mayor espaciado.
+El modo persiste entre páginas.
+◦Problemas Encontrados y Soluciones: Ninguno. El cambio de tema a través del Provider funcionó globalmente como se esperaba.
+
+Caso de Prueba: CP-04: Compilación y Ejecución en Windows
+◦Pasos de Prueba: 
+1. Limpiar el proyecto (flutter clean).
+2. Obtener dependencias (flutter pub get).
+3. Intentar compilar para Windows.
+◦Resultado Esperado: La aplicación debe compilar y ejecutarse sin errores.
+◦Problemas Encontrados y Soluciones: La versión inicial de flutter_tts causaba un error de compilación de CMake.
+Se investigó y se cambió la dependencia a una versión anterior más estable (3.8.5), solucionando el problema.
+
+### **Acta o Bitácora de Implementación**
+•Fase 1
+◦Actividad: Implementación inicial de Texto a Voz (TTS) en el widget de zoom.
+◦Responsable(s): Desarrollador Abraham Armando Aganza Molina
+◦Cambios Realizados: Modificación de zoom_buttons.dart y adición de flutter_tts al pubspec.yaml.
+
+•Fase 2
+◦Actividad: Depuración de errores de compilación y refactorización.
+◦Responsable(s): Desarrollador Abraham Armando Aganza Molina
+◦Cambios Realizados: Se cambió la versión de flutter_tts. Se refactorizó la lógica de TTS a accessibility_buttons.dart.
+
+Fase 3
+◦Actividad: Creación de sistema de TTS dinámico por página.
+◦Responsable(s): Asistente AI
+◦Cambios Realizados: Creación de AccessibilityTextProvider. Modificación de main.dart, LoginPage, DashboardPage, etc., para usar el nuevo Provider.
+
+•Fase 4
+◦Actividad: Corrección de bug de estado en navegación "hacia atrás".
+◦Responsable(s): Asistente AI, Desarrollador◦Cambios Realizados: Creación de RouteObserver en main.dart y router.dart. Refactorización de páginas clave a StatefulWidget con RouteAware.
+
+Fase 5◦Actividad: Implementación de Modo de Lectura para Dislexia.
+◦Responsable(s): Desarrollador Abraham Armando Aganza Molina
+◦Cambios Realizados: Adición de fuentes a assets/fonts. Modificación de pubspec.yaml. Creación de DyslexiaFriendlyProvider. Edición de theme.dart y accessibility_buttons.dart.
+
+### **Análisis de Público Objetivo / Necesidades Especiales**
+Tipo de Usuario: Usuarios con Baja Visión
+◦Necesidades Específicas: Textos más grandes y legibles. Interfaz con buen contraste.
+◦Cómo el Proyecto las Cubre:
+▪Función de Zoom: Permite escalar el texto de la UI.
+▪Modo Oscuro: Ofrece una alternativa de alto contraste que reduce el deslumbramiento.
+
+Tipo de Usuario: Usuarios con Dislexia
+◦Necesidades Específicas: Tipografías diseñadas para evitar la rotación de caracteres. Mayor espaciado entre letras y palabras.
+◦Cómo el Proyecto las Cubre: Modo de Lectura para Dislexia: Cambia toda la tipografía de la app a OpenDyslexic y aumenta el letterSpacing.
+
+•Tipo de Usuario: Usuarios Ciegos / Dependientes de Lectores de Pantalla
+◦Necesidades Específicas: Contexto auditivo sobre la página actual y su propósito.
+◦Cómo el Proyecto las Cubre: Navegación por Voz: Proporciona una descripción verbal del contenido y la función de cada pantalla.
+
+Tipo de Usuario: Usuarios con Fotosensibilidad
+◦Necesidades Específicas: Reducción del brillo general de la pantalla.
+◦Cómo el Proyecto las Cubre: Modo Oscuro: Reduce significativamente la emisión de luz blanca.
+
 
 ### **Resultados**
+
+Grafica de pareto que muestra los factores de riesgo mas comunes en los alumnos 
+
+<img width="1735" height="811" alt="image" src="https://github.com/user-attachments/assets/5d63eeab-eb94-46d4-a16f-eefb09115968" />
+
+
+Diagrama de dispersion que muestra los alumnos con calificacion y asistencia
+
+<img width="1744" height="824" alt="image" src="https://github.com/user-attachments/assets/abf14c77-b89e-4ea2-b8cd-5f5278519894" />
+
+<img width="1728" height="806" alt="image" src="https://github.com/user-attachments/assets/1cf9d66c-a46f-4a6a-8143-2782088b0543" />
+
+
+grafico de barras para los promedios generales del grupo
+
+
+<img width="1729" height="445" alt="image" src="https://github.com/user-attachments/assets/ea367cb5-9523-4f40-86a5-6de5fd2c5c20" />
+
+
+
+
 
 ### **Conclusiones**
 **Abraham Armando Aganza molina**
@@ -135,6 +329,17 @@ Los modelos de calidad son una herramienta poderosa para identificar datos de ma
 No solo eso permiten corregir errores a la hora de desarrollar un sistema o producto, la forma en la que se crea una relacion en los datos aumenta considerablemente la identificaciones de posibles errores en el plan de desarrollo de un producto
 Las metricas de calidad son importantes en el dia a dia, estamos en tiempos de competencia tecnologica donde los clientes y empresas busacan ciertos requisitos para comprar un proyecto, es necesario cumplir con estas mdeidads para garantizar un producto con un nivel de competencia que sobreviva en el mercado
 
+La implementación de funciones de accesibilidad no es solo una tarea técnica, sino un ejercicio de empatía que requiere entender las barreras que enfrentan diferentes usuarios. La arquitectura de Flutter con Providers demostró ser muy flexible para implementar cambios globales en la UI, como el cambio de tema o fuente
+
+A través de esta práctica, he aprendido a manejar el estado de la aplicación de manera más eficiente, a depurar errores de compilación específicos de una plataforma (Windows/CMake) y, lo más importante, a integrar pautas de accesibilidad (WCAG) en un ciclo de desarrollo real. Mi comprensión sobre la importancia de los lectores de pantalla y las tipografías especializadas ha aumentado significativamente
+
+Considero que mi desempeño en esta práctica merece una calificación de 80, ya que no solo se cumplieron los objetivos técnicos de la implementación, pero aun asi faltan agregar mas sistemas de accesibilidad y considerar ciertas problematicas que no se contemplan a la hora de crear el sistema
+
+**Ángel Omar Morales Calvo**
+
+En un entorno altamente competitivo, donde cientos de sistemas nacen constantemente, resulta difícil diferenciarse si no se cumplen con diversos aspectos de calidad que permiten sobreponerse ante otras propuestas. Los modelos de calidad en software establecen criterios y métricas con las cuales podemos evaluar y medir puntos clave como la funcionalidad, confiabilidad, usabilidad y mantenibilidad. Tomando en cuenta estos puntos a la hora de conceptualizar un sistema hasta desarrollarlo y entregarlo, se vuelve mucho más fácil saber si un proyecto es viable o no a medida en que se progresa en su ciclo de vida.
+
+Establecer un estándar de calidad permite no solo que se tenga como resultado un producto de alto valor para el cliente, si no que también hace más predecible el desarrollo, por lo que en términos de tiempo y costos, su factibilidad y aumenta, y se ve reflejado en el producto final, si es que en un inicio este tiene potencial.
 
 ### **Recomendaciones**
 1. Normalizar los datos a utilizar para tener un mejor control y darle un mejor aspecto visaul con consistencia.

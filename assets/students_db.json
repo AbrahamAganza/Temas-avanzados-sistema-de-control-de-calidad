@@ -1,0 +1,62 @@
+[
+  {
+    "id": "20210001",
+    "name": "Carlos Sánchez",
+    "carrera": "Ingeniería de Software",
+    "semestre": "7",
+    "calificaciones": {
+      "Unidad 1": 85,
+      "Unidad 2": 92,
+      "Unidad 3": 78
+    },
+    "asistencia": 80,
+    "conJustificante": false,
+    "factoresRiesgo": {
+      "Académico": true,
+      "Psicosocial": false,
+      "Institucional": false,
+      "Económico": true,
+      "Contextual": false
+    }
+  },
+  {
+    "id": "20210002",
+    "name": "Ana Gómez",
+    "carrera": "Medicina",
+    "semestre": "5",
+    "calificaciones": {
+      "Unidad 1": 95,
+      "Unidad 2": 91,
+      "Unidad 3": 88
+    },
+    "asistencia": 95,
+    "conJustificante": false,
+    "factoresRiesgo": {
+      "Académico": false,
+      "Psicosocial": true,
+      "Institucional": false,
+      "Económico": false,
+      "Contextual": false
+    }
+  },
+  {
+    "id": "20210003",
+    "name": "Luisa Fernández",
+    "carrera": "Derecho",
+    "semestre": "3",
+    "calificaciones": {
+      "Unidad 1": 75,
+      "Unidad 2": 80,
+      "Unidad 3": 72
+    },
+    "asistencia": 70,
+    "conJustificante": true,
+    "factoresRiesgo": {
+      "Académico": true,
+      "Psicosocial": true,
+      "Institucional": true,
+      "Económico": false,
+      "Contextual": true
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "fullName": "Juan Pérez",
+    "email": "juan.perez@example.com",
+    "password": "123456",
+    "avatar": "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    "id": 2,
+    "fullName": "María García",
+    "email": "maria.garcia@example.com",
+    "password": "123456",
+    "avatar": "https://randomuser.me/api/portraits/women/2.jpg"
+  },
+  {
+    "id": 3,
+    "fullName": "Pedro Rodríguez",
+    "email": "pedro.rodriguez@example.com",
+    "password": "123456",
+    "avatar": "https://randomuser.me/api/portraits/men/3.jpg"
+  }
+]

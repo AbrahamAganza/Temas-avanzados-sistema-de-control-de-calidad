@@ -1,0 +1,30 @@
+{
+  "calificaciones": [
+    {"materia": "Cálculo", "calificacion": 65},
+    {"materia": "Física", "calificacion": 72},
+    {"materia": "Programación", "calificacion": 88},
+    {"materia": "Química", "calificacion": 55},
+    {"materia": "Cálculo", "calificacion": 70},
+    {"materia": "Física", "calificacion": 81},
+    {"materia": "Programación", "calificacion": 92},
+    {"materia": "Química", "calificacion": 60},
+    {"materia": "Cálculo", "calificacion": 80},
+    {"materia": "Física", "calificacion": 78},
+    {"materia": "Programación", "calificacion": 95},
+    {"materia": "Química", "calificacion": 68}
+  ],
+  "asistencias": [
+    {"materia": "Cálculo", "asistencias": 80},
+    {"materia": "Física", "asistencias": 90},
+    {"materia": "Programación", "asistencias": 95},
+    {"materia": "Química", "asistencias": 75},
+    {"materia": "Cálculo", "asistencias": 85},
+    {"materia": "Física", "asistencias": 92},
+    {"materia": "Programación", "asistencias": 98},
+    {"materia": "Química", "asistencias": 70},
+    {"materia": "Cálculo", "asistencias": 88},
+    {"materia": "Física", "asistencias": 94},
+    {"materia": "Programación", "asistencias": 100},
+    {"materia": "Química", "asistencias": 65}
+  ]
+}

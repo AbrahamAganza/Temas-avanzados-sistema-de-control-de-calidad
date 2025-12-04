@@ -1,30 +1,57 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:provider/provider.dart';
 import 'package:tads/main.dart';
+import 'package:tads/providers/accessibility_text_provider.dart';
+import 'package:tads/providers/auth_provider.dart';
+import 'package:tads/providers/audit_provider.dart';
+import 'package:tads/providers/color_blindness_provider.dart';
+import 'package:tads/providers/dyslexia_friendly_provider.dart';
+import 'package:tads/providers/route_notifier.dart';
+import 'package:tads/providers/student_provider.dart';
+import 'package:tads/providers/subject_provider.dart';
+import 'package:tads/providers/text_to_speech_provider.dart';
+import 'package:tads/providers/theme_notifier.dart';
+import 'package:tads/providers/voice_assistant_provider.dart';
+import 'package:tads/features/accessibility/presentation/providers/accessibility_provider.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  // Define una función para crear la app con todos sus proveedores
+  Widget createTestApp() {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => RouteNotifier()),
+        ChangeNotifierProvider(create: (_) => ThemeNotifier()),
+        ChangeNotifierProvider(create: (_) => AuditProvider()),
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
+        ChangeNotifierProvider(create: (_) => AccessibilityProvider()),
+        ChangeNotifierProvider(create: (_) => AccessibilityTextProvider()),
+        ChangeNotifierProvider(create: (_) => DyslexiaFriendlyProvider()),
+        ChangeNotifierProvider(create: (_) => ColorBlindnessProvider()),
+        ChangeNotifierProvider(create: (_) => TextToSpeechProvider()),
+        ChangeNotifierProvider(create: (_) => VoiceAssistantProvider()),
+        ChangeNotifierProxyProvider<AuthProvider, SubjectProvider>(
+          create: (context) => SubjectProvider(null),
+          update: (context, auth, previous) => SubjectProvider(auth.userId),
+        ),
+        ChangeNotifierProxyProvider2<AuditProvider, SubjectProvider, StudentProvider>(
+          create: (context) => StudentProvider(),
+          update: (context, auditProvider, subjectProvider, studentProvider) =>
+              StudentProvider(auditProvider: auditProvider, subjectId: subjectProvider.selectedSubjectId, userId: subjectProvider.userId),
+        ),
+      ],
+      child: const MyApp(),
+    );
+  }
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('App starts and displays login page', (WidgetTester tester) async {
+    // Usa la función para construir la app con el entorno de proveedores correcto
+    await tester.pumpWidget(createTestApp());
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // Espera a que todas las animaciones y futuros (como el router) se completen
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verifica que un elemento de la página de login (el campo de Email) esté presente
+    expect(find.widgetWithText(TextFormField, 'Email'), findsOneWidget);
   });
 }

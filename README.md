@@ -54,8 +54,7 @@ Para el usuario, la calidad se traduce en la experiencia que tiene al interactua
 
 1. Satisfacción y Lealtad: Un software de alta calidad (rápido, intuitivo, sin errores) genera confianza y lealtad. El usuario percibe valor, reduce su frustración y es menos probable que cambie a un competidor.
 2. Baja Calidad: Fomenta la frustración, las quejas públicas (redes sociales, foros) y la búsqueda activa de alternativas.
-3. Importancia para la Empresa (Organización)
-
+3. Importancia para la Empresa (Organización).
 Para la empresa que desarrolla o posee el software, la calidad es una inversión que reduce costos y protege la reputación:
 
 1. Reducción de Costos a Largo Plazo: Invertir en calidad (pruebas, buen diseño de código) al inicio reduce el costo total de propiedad (TCO). Corregir errores en etapas avanzadas (o, peor, después del lanzamiento) es exponencialmente más caro.

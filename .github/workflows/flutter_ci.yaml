@@ -1,43 +1,48 @@
-    # Nombre del workflow, aparecerá en la pestaña "Actions" de GitHub
-    name: Flutter CI
+name: Flutter CI and SonarCloud Analysis
 
-    # Define cuándo se ejecutará este workflow
-    on:
-      # Se ejecuta en cada 'push' (commit) a la rama 'main'
-      push:
-        branches: [ main ]
-      # También se ejecuta cuando se abre un 'pull request' hacia 'main'
-      pull_request:
-        branches: [ main ]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
-    # Define los trabajos (jobs) que se van a ejecutar
-    jobs:
-      # Nombramos nuestro trabajo como "build_and_test"
-      build_and_test:
-        # Usará una máquina virtual con la última versión de Ubuntu
-        runs-on: ubuntu-latest
+jobs:
+  build_and_test:
+    name: Build, Test & Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-        # Estos son los pasos que se ejecutarán en orden
-        steps:
-          # 1. Descarga el código de tu repositorio a la máquina virtual
-          - name: Checkout repository
-            uses: actions/checkout@v3
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
 
-          # 2. Configura el entorno de desarrollo de Flutter
-          - name: Set up Flutter
-            uses: subosito/flutter-action@v2
-            with:
-              channel: 'stable' # O la versión que uses, ej: '3.13.x'
+      - name: Install dependencies
+        run: flutter pub get
 
-          # 3. Instala todas las dependencias de tu proyecto
-          - name: Install dependencies
-            run: flutter pub get
+      - name: Analyze project source
+        run: flutter analyze
 
-          # 4. Analiza el código buscando errores de sintaxis y estilo
-          - name: Analyze project source
-            run: flutter analyze
+      - name: Run tests
+        run: flutter test --coverage # ¡Importante! Añadimos '--coverage'
 
-          # 5. Ejecuta todas las pruebas que tengas en la carpeta 'test/'
-          - name: Run tests
-            run: flutter test
-    
+  sonarcloud:
+    name: SonarCloud Analysis
+    # Este trabajo necesita que el anterior termine con éxito
+    needs: build_and_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          # Necesario para que SonarQube pueda analizar el historial completo
+          fetch-depth: 0
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          # Token de seguridad guardado en los secretos de GitHub
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
